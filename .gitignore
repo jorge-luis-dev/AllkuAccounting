@@ -1,3 +1,5 @@
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -28,6 +30,7 @@ share/python-wheels/
 MANIFEST
 bin/
 pyvenv.cfg
+migrations/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
