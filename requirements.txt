@@ -1,0 +1,13 @@
+# Development
+Flask
+Flask-Migrate
+Flask-Script
+Flask-SQLAlchemy
+psycopg2-binary
+
+# SpaceVim
+autoflake
+coverage
+flake8
+isort
+yapf
