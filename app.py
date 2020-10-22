@@ -1,51 +1,20 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+from flask_restful import Api
+from hello import Hello
 
 app = Flask(__name__)
+api = Api(app)
 
 app.config.from_pyfile('config.cfg')
 db = SQLAlchemy(app)
 
-from models import Book
+from bookapi import *
 
-
-@app.route("/")
-def hello():
-    return "Hello World!"
-
-
-@app.route("/add")
-def add_book():
-    name = request.args.get('name')
-    author = request.args.get('author')
-    published = request.args.get('published')
-    try:
-        book = Book(name=name, author=author, published=published)
-        db.session.add(book)
-        db.session.commit()
-        return "Book added. book id={}".format(book.id)
-    except Exception as e:
-        return (str(e))
-
-
-@app.route("/getall")
-def get_all():
-    try:
-        books = Book.query.all()
-        return jsonify([e.serialize() for e in books])
-    except Exception as e:
-        return (str(e))
-
-
-@app.route("/get/<id_>")
-def get_by_id(id_):
-    try:
-        book = Book.query.filter_by(id=id_).first()
-        return jsonify(book.serialize())
-    except Exception as e:
-        return (str(e))
-
+api.add_resource(Hello, '/hello')
+api.add_resource(BookListApi, '/books')
+api.add_resource(BookApi, '/book/<int:id_book>')
 
 
 if __name__ == '__main__':

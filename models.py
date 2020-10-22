@@ -6,9 +6,9 @@ class Book(db.Model):
     __tablename__ = 'books'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100))
-    author = db.Column(db.String(150))
-    published = db.Column(db.String(100))
+    name = db.Column(db.String(100), nullable=False)
+    author = db.Column(db.String(150), nullable=False)
+    published = db.Column(db.String(100), nullable=False)
 
     def __init__(self, name, author, published):
         self.name = name
