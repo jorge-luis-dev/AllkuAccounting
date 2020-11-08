@@ -10,20 +10,18 @@ class BookListApi(Resource):
     def get(self):
         try:
             books = Book.query.all()
-            return jsonify([e.serialize() for e in books])
+            return jsonify([e.to_json() for e in books])
         except Exception as e:
             return str(e), 404
 
     def post(self):
-        parser.add_argument('name')
-        parser.add_argument('author')
+        parser.add_argument('name', type=str, help="Name of the book", required=True)
         parser.add_argument('published')
         args = parser.parse_args()
         name = args['name']
-        author = args['author']
         published = args['published']
         try:
-            book = Book(name=name, author=author, published=published)
+            book = Book(name=name, published=published, authors=None)
             db.session.add(book)
             db.session.commit()
             return "Book added. book id={}".format(book.id), 201
