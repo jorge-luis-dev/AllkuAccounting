@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask_restful import Resource, reqparse
-from models import Book
-from flask import jsonify
+from models import Book, Author
+from flask import jsonify, request
 from app import db
 
 parser = reqparse.RequestParser()
@@ -17,17 +17,18 @@ class BookListApi(Resource):
             return str(e), 404
 
     def post(self):
-        parser.add_argument('name', type=str,
-                            help="Name of the book",
-                            required=True)
-        parser.add_argument('editorial')
-        parser.add_argument('published')
-        args = parser.parse_args()
-        name = args['name']
-        editorial = args['editorial']
-        published = args['published']
+        data = request.get_json()
+        print(data)
         try:
-            book = Book(name=name, editorial=editorial ,published=published)
+            name = data['name']
+            editorial = data['editorial']
+            published = data['published']
+            book = Book(name=name, editorial=editorial, published=published)
+
+            for a in data['authors']:
+                book.authors.append(Author(name=a['name']))
+                print(a)
+
             db.session.add(book)
             db.session.commit()
             return "Book added. book id={}".format(book.id), 201
