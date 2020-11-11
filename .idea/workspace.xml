@@ -20,14 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff93c2ce-9153-4043-9923-50427701a22a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/bookapi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -147,9 +154,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1891" height="260" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1603382310750" />
-    <state x="332" y="101" width="1256" height="912" key="SettingsEditor" timestamp="1603382349521">
+    <state x="332" y="101" width="1256" height="912" key="SettingsEditor" timestamp="1604951956268">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="332" y="101" width="1256" height="912" key="SettingsEditor/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1603382349521" />
+    <state x="332" y="101" width="1256" height="912" key="SettingsEditor/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1604951956268" />
   </component>
 </project>

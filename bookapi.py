@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from flask_restful import Resource, reqparse
-from models import Book, Author
 from flask import jsonify, request
 from app import db
+from models.author import Author
+from models.book import Book
 
 parser = reqparse.RequestParser()
 
