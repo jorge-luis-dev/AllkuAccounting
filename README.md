@@ -31,5 +31,8 @@ $ python manage.py runserver
 ### Generate requirements with vertion
 $ pip freeze > requirements_with_version.txt
 
+## Util
+### Remove cache (directory __pycache__)
+$ py3clean .
 
 

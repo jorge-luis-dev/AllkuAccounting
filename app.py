@@ -9,7 +9,7 @@ api = Api(app)
 app.config.from_pyfile('config.cfg')
 db = SQLAlchemy(app)
 
-from bookapi import *
+from api.bookapi import *
 
 api.add_resource(BookListApi, '/books')
 api.add_resource(BookApi, '/book/<int:id_book>')
