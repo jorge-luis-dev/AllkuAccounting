@@ -3,8 +3,10 @@ Flask
 Flask-Migrate
 Flask-Script
 Flask-SQLAlchemy
-psycopg2-binary
 Flask-RESTful
+
+# Postgres database
+psycopg2-binary
 
 # SpaceVim
 autoflake

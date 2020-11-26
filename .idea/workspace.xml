@@ -20,11 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff93c2ce-9153-4043-9923-50427701a22a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/document.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllkuAccounting.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllkuAccounting.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllkuAccounting.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllkuAccounting.xcodeproj/project.xcworkspace/xcuserdata/jorgequiguango.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllkuAccounting.xcodeproj/xcuserdata/jorgequiguango.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/bookapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/transactionapi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/bookapi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ledgerentrie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +58,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/manage.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../3xample/3xamplePythonFlask" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -137,10 +147,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="679" y="328" width="679" height="518" key="#com.intellij.ide.util.TreeClassChooserDialog/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1603382262246" />
-    <state x="754" y="269" width="530" height="605" key="FileChooserDialogImpl" timestamp="1603382271996">
+    <state x="556" y="27" width="1354" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1606405048090">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="754" y="269" width="530" height="605" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1603382271996" />
+    <state x="556" y="27" width="1354" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1606405048090" />
+    <state x="754" y="269" width="530" height="605" key="FileChooserDialogImpl" timestamp="1605204473681">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="754" y="269" width="530" height="605" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1605204473681" />
     <state width="1891" height="260" key="GridCell.Tab.0.bottom" timestamp="1603382310750">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -165,5 +179,13 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="134" y="27" width="1641" height="1053" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1605061456176" />
+    <state x="587" y="60" width="745" height="987" key="find.popup" timestamp="1606414549690">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="587" y="60" width="745" height="987" key="find.popup/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1606414549690" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1606415380675">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1606415380675" />
   </component>
 </project>

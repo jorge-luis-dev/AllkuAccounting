@@ -5,7 +5,7 @@ Ecuador Accounting
 * Python 3
 * PostgreSQL 12
 
-### Create virtual enviroment
+### Create virtual environment
 Into folder project
 $ virtualenv venv
 $ source venv/bin/activate

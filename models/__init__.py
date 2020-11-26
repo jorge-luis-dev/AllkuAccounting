@@ -2,4 +2,4 @@ from flask import Blueprint
 
 models = Blueprint('models', __name__)
 
-from . import book, author
+from . import transaction, ledgerentrie, account, document

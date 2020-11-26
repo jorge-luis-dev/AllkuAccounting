@@ -1,15 +1,16 @@
+# -*- coding: utf-8 -*-
 from app import db
 
 
-class Book(db.Model):
-    __tablename__ = 'books'
+class Transaction(db.Model):
+    __tablename__ = 'acc_transactions'
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     editorial = db.Column(db.String(150), nullable=False)
     published = db.Column(db.String(100), nullable=False)
-    authors = db.relationship('Author',
-                              backref='book',
+    authors = db.relationship('LedgerEntrie',
+                              backref='ledgerentrie',
                               lazy='dynamic',
                               cascade="all, delete")
 
