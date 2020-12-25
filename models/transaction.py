@@ -5,7 +5,7 @@ from app import db
 class Transaction(db.Model):
     __tablename__ = 'acc_transactions'
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
     name = db.Column(db.String(100), nullable=False)
     editorial = db.Column(db.String(150), nullable=False)
     published = db.Column(db.String(100), nullable=False)

@@ -12,6 +12,10 @@ $ source venv/bin/activate
 
 ### Install requirements
 $ pip install -r requirements.txt
+#### Update to SQLAlchemy 1.4 beta
+$ pip uninstall SQLAlchemy
+$ pip install SQLAlchemy==1.4.0b1
+and replace in file in folder migrations/versions/*.py, search error and put "sa.Identity(start=1)"
 
 ### Create database MacOS with Postgres.app
 $ createdb allku

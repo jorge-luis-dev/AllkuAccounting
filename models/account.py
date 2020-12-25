@@ -7,7 +7,7 @@ from sqlalchemy import UniqueConstraint, ForeignKey
 class Account(db.Model):
     __tablename__ = 'acc_accounts'
 
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
     account_id = db.Column(db.Integer, ForeignKey('acc_accounts.id'))
     code = db.Column(db.String(90), nullable=False, unique=True)
     description = db.Column(db.String(180), nullable=False)
