@@ -9,7 +9,7 @@ from models.document import Document
 parser = reqparse.RequestParser()
 
 
-class TransactionListApi(Resource):
+class TransactionListController(Resource):
 
     def get(self):
         try:
@@ -38,7 +38,7 @@ class TransactionListApi(Resource):
             return str(e), 400
 
 
-class TransactionApi(Resource):
+class TransactionController(Resource):
 
     def get(self, id_transaction):
         try:

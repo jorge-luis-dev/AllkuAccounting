@@ -6,9 +6,9 @@ class Transaction(db.Model):
     __tablename__ = 'acc_transactions'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    editorial = db.Column(db.String(150), nullable=False)
-    published = db.Column(db.String(100), nullable=False)
+    name = db.Column(db.String, nullable=False)
+    editorial = db.Column(db.String, nullable=False)
+    published = db.Column(db.String, nullable=False)
     authors = db.relationship('LedgerEntrie',
                               backref='ledgerentrie',
                               lazy='dynamic',

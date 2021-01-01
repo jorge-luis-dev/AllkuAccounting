@@ -9,14 +9,14 @@ api = Api(app)
 app.config.from_pyfile('config.cfg')
 db = SQLAlchemy(app)
 
-from api.transactionapi import *
-from api.accountapi import *
+from controller.transactioncontroller import *
+from controller.accountcontroller import *
 
-api.add_resource(AccountListApi, '/accounts')
-api.add_resource(AccountApi, '/account/<int:id_account>')
-api.add_resource(AccountCodeApi, '/account_by_code/<string:code>')
-api.add_resource(TransactionListApi, '/books')
-api.add_resource(TransactionApi, '/book/<int:id_book>')
+api.add_resource(AccountListController, '/rest/v1/accounts')
+api.add_resource(AccountController, '/rest/v1/accounts/<int:id_account>')
+api.add_resource(AccountCodeController, '/account_by_code/<string:code>')
+api.add_resource(TransactionListController, '/books')
+api.add_resource(TransactionController, '/book/<int:id_book>')
 
 
 if __name__ == '__main__':

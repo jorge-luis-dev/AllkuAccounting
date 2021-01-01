@@ -7,10 +7,10 @@ class Document(db.Model):
     __tablename__ = 'adm_documents'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
-    code = db.Column(db.String(90), nullable=False, unique=True)
-    description = db.Column(db.String(180), nullable=False)
+    code = db.Column(db.String, nullable=False, unique=True)
+    description = db.Column(db.String, nullable=False)
     operator = db.Column(db.Integer, nullable=False)
-    status = db.Column(db.String(90), nullable=False)
+    status = db.Column(db.String, nullable=False)
     UniqueConstraint('code')
 
     def __init__(self, code='',

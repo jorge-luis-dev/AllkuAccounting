@@ -5,7 +5,7 @@ from app import db
 from models.account import Account
 
 
-class AccountListApi(Resource):
+class AccountListController(Resource):
     def get(self):
         try:
             account = Account.query.all()
@@ -18,8 +18,7 @@ class AccountListApi(Resource):
         print(data)
         try:
             code = data['code']
-            description = data['description']
-            level = data['level']
+            name = data['name']
             type = data['type']
             status = data['status']
 
@@ -35,15 +34,13 @@ class AccountListApi(Resource):
                 else:
                     account_id = account.id
                     account = Account(code=code,
-                                      description=description,
-                                      level=level,
+                                      name=name,
                                       type=type,
                                       status=status,
                                       account_id=account_id)
             else:
                 account = Account(code=code,
-                                  description=description,
-                                  level=level,
+                                  name=name,
                                   type=type,
                                   status=status)
 
@@ -54,7 +51,7 @@ class AccountListApi(Resource):
             return str(e), 400
 
 
-class AccountApi(Resource):
+class AccountController(Resource):
     def get(self, id_account):
         try:
             account = Account.query.filter_by(id=id_account).first()
@@ -65,7 +62,7 @@ class AccountApi(Resource):
             return str(e), 404
 
 
-class AccountCodeApi(Resource):
+class AccountCodeController(Resource):
     def get(self, code):
         try:
             account = Account.query.filter_by(code=code).first()

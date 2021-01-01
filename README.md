@@ -13,6 +13,7 @@ $ source venv/bin/activate
 ### Install requirements
 $ pip install -r requirements.txt
 #### Update to SQLAlchemy 1.4 beta
+$ pip list
 $ pip uninstall SQLAlchemy
 $ pip install SQLAlchemy==1.4.0b1
 and replace in file in folder migrations/versions/*.py, search error and put "sa.Identity(start=1)"
@@ -39,4 +40,32 @@ $ pip freeze > requirements_with_version.txt
 ### Remove cache (directory __pycache__)
 $ py3clean .
 
+## Test
+Use HTTPie
+https://httpie.io/
+
+### GET (All locations)
+```console
+http http://127.0.0.1:5000/rest/v1/accounts
+```
+### GET (One location)
+```console
+http http://127.0.0.1:5000/rest/v1/accounts/1
+```
+### GET (All active locations)
+```console
+http http://127.0.0.1:8080/rest/v1/locations/active
+```
+### POST (Province and City)
+```console
+http POST http://127.0.0.1:5000/accounts < files/new_account.json
+```
+### PUT
+```console
+http PUT http://127.0.0.1:8080/rest/v1/locations/2 < files/update_location.json
+```
+### DELETE
+```console
+http DELETE http://127.0.0.1:8080/rest/v1/locations/41
+```
 
