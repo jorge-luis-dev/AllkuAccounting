@@ -4,6 +4,7 @@ from sqlalchemy import UniqueConstraint
 
 
 class Document(db.Model):
+    # Code of documents example: ENI, SAI, DGD, etc
     __tablename__ = 'adm_documents'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
