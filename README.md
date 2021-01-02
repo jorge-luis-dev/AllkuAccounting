@@ -17,6 +17,7 @@ $ pip list
 $ pip uninstall SQLAlchemy
 $ pip install SQLAlchemy==1.4.0b1
 and replace in file in folder migrations/versions/*.py, search error and put "sa.Identity(start=1)"
+also comment instruction of others tables not includes in models (migrations/versions/anyfile.py)
 
 ### Create database MacOS with Postgres.app
 $ createdb allku
