@@ -20,22 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff93c2ce-9153-4043-9923-50427701a22a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AllkuAccounting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AllkuAccounting.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/accountapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/accountcontroller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/transactionapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/transactioncontroller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/config.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/document.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/document.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ledgerentrie.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ledgerentrie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/accountcontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/accountcontroller.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +48,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/models" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql/acc_accounts" />
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$" />
     </key>

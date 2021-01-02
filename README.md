@@ -44,15 +44,19 @@ $ py3clean .
 Use HTTPie
 https://httpie.io/
 
-### GET (All locations)
+### GET (All accounts)
 ```console
 http http://127.0.0.1:5000/rest/v1/accounts
 ```
-### GET (One location)
+### GET (One account)
 ```console
 http http://127.0.0.1:5000/rest/v1/accounts/1
 ```
-### GET (All active locations)
+### GET (One account by code)
+```console
+http http://127.0.0.1:5000/rest/v1/accounts/code/1
+```
+### GET (All active )
 ```console
 http http://127.0.0.1:8080/rest/v1/locations/active
 ```

@@ -3,12 +3,15 @@ from flask_restful import Resource
 from flask import jsonify, request
 from app import db
 from models.account import Account
+from models.account_view import AccountView
 
 
 class AccountListController(Resource):
     def get(self):
         try:
-            account = Account.query.all()
+            account = AccountView.query.order_by(
+                AccountView.code.asc()
+                ).all()
             return jsonify([b.serialize() for b in account])
         except Exception as e:
             return str(e), 404
@@ -54,7 +57,7 @@ class AccountListController(Resource):
 class AccountController(Resource):
     def get(self, id_account):
         try:
-            account = Account.query.filter_by(id=id_account).first()
+            account = AccountView.query.filter_by(id=id_account).first()
             if account is None:
                 return None, 404
             return jsonify(account.serialize())
@@ -65,7 +68,7 @@ class AccountController(Resource):
 class AccountCodeController(Resource):
     def get(self, code):
         try:
-            account = Account.query.filter_by(code=code).first()
+            account = AccountView.query.filter_by(code=code).first()
             if account is None:
                 return None, 404
             return jsonify(account.serialize())

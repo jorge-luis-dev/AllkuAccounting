@@ -14,7 +14,7 @@ from controller.accountcontroller import *
 
 api.add_resource(AccountListController, '/rest/v1/accounts')
 api.add_resource(AccountController, '/rest/v1/accounts/<int:id_account>')
-api.add_resource(AccountCodeController, '/account_by_code/<string:code>')
+api.add_resource(AccountCodeController, '/rest/v1/accounts/code/<string:code>')
 api.add_resource(TransactionListController, '/books')
 api.add_resource(TransactionController, '/book/<int:id_book>')
 
