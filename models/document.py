@@ -8,7 +8,7 @@ class Document(db.Model):
     __tablename__ = 'adm_documents'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
-    code = db.Column(db.String, nullable=False, unique=True)
+    code = db.Column(db.String, nullable=False)
     name = db.Column(db.String, nullable=False)
     operator = db.Column(db.Integer, nullable=False)
     module = db.Column(db.String, nullable=False)

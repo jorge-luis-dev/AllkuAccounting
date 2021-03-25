@@ -26,6 +26,8 @@ also comment instruction of others tables not includes in models
 $ createdb allku
 $ createuser jorgeluis
 $ psql
+or
+$ psql -d database -U user -W
 allku=# grant all privileges on database allku to jorgeluis;
 allku=# alter user jorgeluis with encrypted password 'j';
 
@@ -53,15 +55,15 @@ https://httpie.io/
 
 ### GET (All accounts)
 ```console
-http http://127.0.0.1:5000/rest/v1/accounts
+http http://127.0.0.1:5000/rest/v1/accounting/accounts
 ```
 ### GET (One account)
 ```console
-http http://127.0.0.1:5000/rest/v1/accounts/1
+http http://127.0.0.1:5000/rest/v1/accounting/accounts/1
 ```
 ### GET (One account by code)
 ```console
-http http://127.0.0.1:5000/rest/v1/accounts/code/1
+http http://127.0.0.1:5000/rest/v1/accounting/code/1
 ```
 ### GET (All active )
 ```console

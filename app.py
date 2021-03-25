@@ -12,11 +12,14 @@ db = SQLAlchemy(app)
 from controller.transactioncontroller import *
 from controller.accountcontroller import *
 
-api.add_resource(AccountListController, '/rest/v1/accounts')
-api.add_resource(AccountController, '/rest/v1/accounts/<int:id_account>')
-api.add_resource(AccountCodeController, '/rest/v1/accounts/code/<string:code>')
-api.add_resource(TransactionListController, '/books')
-api.add_resource(TransactionController, '/book/<int:id_book>')
+# Accounts
+api.add_resource(AccountListController, '/rest/v1/accounting/accounts')
+api.add_resource(AccountController, '/rest/v1/accounting/accounts/<int:id_account>')
+api.add_resource(AccountCodeController, '/rest/v1/accounting/accounts/code/<string:code>')
+# Transactions
+api.add_resource(TransactionListController, '/rest/v1/accounting/transactions')
+api.add_resource(TransactionController, '/rest/v1/accounting/transaction/<int:id_transaction>')
+api.add_resource(TransactionCodeNumeralController, '/rest/v1/accounting/transaction/code/<string:code>/numeral/<string:numeral>')
 
 
 if __name__ == '__main__':

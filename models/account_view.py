@@ -15,7 +15,6 @@ class AccountView(db.Model):
     status = db.Column(db.String, nullable=False)
     account_id = db.Column(db.Integer, nullable=True)
 
-
     def __init__(self, code='',
                  name='',
                  location='',
@@ -41,6 +40,5 @@ class AccountView(db.Model):
             'type': self.type,
             'status': self.status,
             'accountId': self.account_id
-
         }
         return v_account_data

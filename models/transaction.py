@@ -13,10 +13,10 @@ class Transaction(db.Model):
     observation = db.Column(db.String, nullable=False)
     status = db.Column(db.String, nullable=False)
     __table_args__ = (UniqueConstraint('code', 'numeral', name='uk_transaction'),)
-    # authors = db.relationship('LedgerEntrie',
-    #                           backref='ledgerentrie',
-    #                           lazy='dynamic',
-    #                           cascade="all, delete")
+    ledger_entries = db.relationship('LedgerEntry',
+                              backref='transaction',
+                              lazy='dynamic',
+                              cascade="all, delete")
 
     def __init__(self, code, numeral, date_transaction, observation, status):
         self.code = code
@@ -29,12 +29,23 @@ class Transaction(db.Model):
         return '<id {}>'.format(self.id)
 
     def serialize(self):
+        ledgerentry_data = []
+        for a in self.ledger_entries.all():
+            a_data = {}
+            a_data['id'] = a.id
+            a_data['accountCode'] = a.account_code
+            a_data['type'] = a.type
+            a_data['amount'] = a.amount
+            a_data['observation'] = a.observation
+            ledgerentry_data.append(a_data)
+
         transaction_data = {
             'id': self.id,
             'code': self.code,
             'numeral': self.numeral,
-            'date_transaction': self.date_transaction,
+            'date': self.date_transaction,
             'observation': self.observation,
-            'status': self.status
+            'status': self.status,
+            'ledgerEntries': ledgerentry_data
         }
         return transaction_data

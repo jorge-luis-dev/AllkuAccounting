@@ -9,14 +9,16 @@ class Account(db.Model):
     __tablename__ = 'acc_accounts'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
-    code = db.Column(db.String, nullable=False, unique=True)
+    code = db.Column(db.String, nullable=False)
     name = db.Column(db.String, nullable=False)
     type = db.Column(db.String, nullable=False)
     date_created = db.Column(db.DateTime, default=datetime.datetime.now(), nullable=False)
     status = db.Column(db.String, nullable=False)
     account_id = db.Column(db.Integer, ForeignKey('acc_accounts.id'))
     parent = db.relationship("Account", remote_side=[id])
-    UniqueConstraint('code')
+    ledger_entries = db.relationship('LedgerEntry',
+                                     backref='accounts')
+    __table_args__ = (UniqueConstraint('code', name='uk_account'),)
 
     def __init__(self, code='',
                  name='',
@@ -40,6 +42,5 @@ class Account(db.Model):
             'type': self.type,
             'status': self.status,
             'accountId': self.account_id
-
         }
         return account_data

@@ -10,7 +10,7 @@ parser = reqparse.RequestParser()
 
 
 class TransactionListController(Resource):
-
+    # Return all transactions
     def get(self):
         try:
             transactions = Transaction.query.all()
@@ -39,7 +39,7 @@ class TransactionListController(Resource):
 
 
 class TransactionController(Resource):
-
+    # Return transacction by id
     def get(self, id_transaction):
         try:
             transaction = Transaction.query.filter_by(id=id_transaction).first()
@@ -76,6 +76,18 @@ class TransactionController(Resource):
                 return None, 404
             db.session.delete(transaction)
             db.session.commit()
+            return jsonify(transaction.serialize())
+        except Exception as e:
+            return str(e), 404
+
+
+class TransactionCodeNumeralController(Resource):
+    # Return transacction by code and numeral
+    def get(self, code, numeral):
+        try:
+            transaction = Transaction.query.filter_by(code=code, numeral=numeral).first()
+            if transaction is None:
+                return None, 404
             return jsonify(transaction.serialize())
         except Exception as e:
             return str(e), 404

@@ -7,6 +7,7 @@ from models.account_view import AccountView
 
 
 class AccountListController(Resource):
+    # Return all accounts
     def get(self):
         try:
             account = AccountView.query.order_by(
@@ -15,7 +16,7 @@ class AccountListController(Resource):
             return jsonify([b.serialize() for b in account])
         except Exception as e:
             return str(e), 404
-
+    # Insert new account
     def post(self):
         data = request.get_json()
         print(data)
@@ -55,6 +56,7 @@ class AccountListController(Resource):
 
 
 class AccountController(Resource):
+    # Return account by id
     def get(self, id_account):
         try:
             account = AccountView.query.filter_by(id=id_account).first()
@@ -66,6 +68,7 @@ class AccountController(Resource):
 
 
 class AccountCodeController(Resource):
+    # Return account by code account
     def get(self, code):
         try:
             account = AccountView.query.filter_by(code=code).first()
