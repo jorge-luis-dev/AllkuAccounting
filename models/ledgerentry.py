@@ -27,10 +27,10 @@ class LedgerEntry(db.Model):
     def serialize(self):
         ledgerentry_data = {
             'id': self.id,
-            'account_code': self.account_code,
+            'accountCode': self.account_code,
             'type': self.type,
             'amount': self.amount,
             'observation': self.observation,
-            'transaction_id': self.transaction_id
+            'transactionId': self.transaction_id
         }
         return ledgerentry_data

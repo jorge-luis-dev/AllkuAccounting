@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from app import db
 from sqlalchemy import UniqueConstraint
+from models.account import Account
 
 
 class Transaction(db.Model):
@@ -34,6 +35,8 @@ class Transaction(db.Model):
             a_data = {}
             a_data['id'] = a.id
             a_data['accountCode'] = a.account_code
+            account = Account.query.filter_by(code=a.account_code).first()
+            a_data['accountName'] = account.name
             a_data['type'] = a.type
             a_data['amount'] = a.amount
             a_data['observation'] = a.observation
