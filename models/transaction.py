@@ -2,13 +2,15 @@
 from app import db
 from sqlalchemy import UniqueConstraint
 from models.account import Account
+from models.document import Document
 
 
 class Transaction(db.Model):
     __tablename__ = 'acc_transactions'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
-    code = db.Column(db.String, nullable=False)
+    code = db.Column(db.String,
+                     db.ForeignKey('adm_documents.code'), nullable=False)
     numeral = db.Column(db.String, nullable=False)
     date_transaction = db.Column(db.DateTime, nullable=False)
     observation = db.Column(db.String, nullable=False)
@@ -35,6 +37,7 @@ class Transaction(db.Model):
             a_data = {}
             a_data['id'] = a.id
             a_data['accountCode'] = a.account_code
+            # Get account name
             account = Account.query.filter_by(code=a.account_code).first()
             a_data['accountName'] = account.name
             a_data['type'] = a.type
@@ -42,9 +45,12 @@ class Transaction(db.Model):
             a_data['observation'] = a.observation
             ledgerentry_data.append(a_data)
 
+        # Get document name
+        document = Document.query.filter_by(code=self.code).first()
         transaction_data = {
             'id': self.id,
             'code': self.code,
+            'codeName': document.name,
             'numeral': self.numeral,
             'date': self.date_transaction,
             'observation': self.observation,

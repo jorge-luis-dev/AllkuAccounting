@@ -19,7 +19,9 @@ api.add_resource(AccountCodeController, '/rest/v1/accounting/accounts/code/<stri
 # Transactions
 api.add_resource(TransactionListController, '/rest/v1/accounting/transactions')
 api.add_resource(TransactionController, '/rest/v1/accounting/transaction/<int:id_transaction>')
-api.add_resource(TransactionCodeNumeralController, '/rest/v1/accounting/transaction/code/<string:code>/numeral/<string:numeral>')
+api.add_resource(TransactionCodeNumeralController, '/rest/v1/accounting/transaction/'
+                                                   'code/<string:code>/'
+                                                   'numeral/<string:numeral>')
 
 
 if __name__ == '__main__':

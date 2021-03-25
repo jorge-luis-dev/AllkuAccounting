@@ -13,6 +13,8 @@ class Document(db.Model):
     operator = db.Column(db.Integer, nullable=False)
     module = db.Column(db.String, nullable=False)
     status = db.Column(db.String, nullable=False)
+    transactions = db.relationship('Transaction',
+                                     backref='document')
     __table_args__ = (UniqueConstraint('code', name='uk_document'),)
 
     def __init__(self, code='',

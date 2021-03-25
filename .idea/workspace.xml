@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ff93c2ce-9153-4043-9923-50427701a22a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ledgerentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ledgerentry.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/document.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/document.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
