@@ -2,8 +2,8 @@
 from app import db
 
 
-class LedgerEntrie(db.Model):
-    __tablename__ = 'acc_ledger_entries'
+class LedgerEntry(db.Model):
+    __tablename__ = 'acc_ledgers_entries'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
     name = db.Column(db.String, nullable=False)

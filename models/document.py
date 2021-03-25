@@ -9,18 +9,21 @@ class Document(db.Model):
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
     code = db.Column(db.String, nullable=False, unique=True)
-    description = db.Column(db.String, nullable=False)
+    name = db.Column(db.String, nullable=False)
     operator = db.Column(db.Integer, nullable=False)
+    module = db.Column(db.String, nullable=False)
     status = db.Column(db.String, nullable=False)
-    UniqueConstraint('code')
+    __table_args__ = (UniqueConstraint('code', name='uk_document'),)
 
     def __init__(self, code='',
-                 description='',
+                 name='',
                  operator=0,
+                 module='',
                  status=''):
         self.code = code
-        self.description = description
+        self.name = name
         self.operator = operator
+        self.module = module
         self.status = status
 
     def __repr__(self):
@@ -30,8 +33,9 @@ class Document(db.Model):
         document_data = {
             'id': self.id,
             'code': self.code,
-            'description': self.description,
+            'name': self.name,
             'operator': self.operator,
+            'module': self.module,
             'status': self.status
         }
         return document_data

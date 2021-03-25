@@ -12,7 +12,7 @@ class Account(db.Model):
     code = db.Column(db.String, nullable=False, unique=True)
     name = db.Column(db.String, nullable=False)
     type = db.Column(db.String, nullable=False)
-    created_date = db.Column(db.DateTime, default=datetime.datetime.now(), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.datetime.now(), nullable=False)
     status = db.Column(db.String, nullable=False)
     account_id = db.Column(db.Integer, ForeignKey('acc_accounts.id'))
     parent = db.relationship("Account", remote_side=[id])

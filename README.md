@@ -12,7 +12,7 @@ $ source venv/bin/activate
 
 ### Install requirements
 $ pip install -r requirements.txt
-#### Update to SQLAlchemy 1.4 beta
+#### Update to SQLAlchemy 1.4 beta 
 $ pip list
 $ pip uninstall SQLAlchemy
 $ pip install SQLAlchemy==1.4.0b1
@@ -33,6 +33,9 @@ allku=# alter user jorgeluis with encrypted password 'j';
 $ python manage.py db init
 $ python manage.py db migrate
 $ python manage.py db upgrade
+
+### Revert migrate to database 
+$ python manage.py db downgrade
 
 ### Run
 $ python manage.py runserver

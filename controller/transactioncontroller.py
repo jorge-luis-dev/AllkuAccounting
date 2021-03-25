@@ -2,7 +2,7 @@
 from flask_restful import Resource, reqparse
 from flask import jsonify, request
 from app import db
-from models.ledgerentrie import LedgerEntrie
+from models.ledgerentry import LedgerEntry
 from models.transaction import Transaction
 from models.document import Document
 
@@ -28,7 +28,7 @@ class TransactionListController(Resource):
             transaction = Transaction(name=name, editorial=editorial, published=published)
 
             for a in data['authors']:
-                transaction.authors.append(LedgerEntrie(name=a['name']))
+                transaction.authors.append(LedgerEntry(name=a['name']))
                 print(a)
 
             db.session.add(transaction)
