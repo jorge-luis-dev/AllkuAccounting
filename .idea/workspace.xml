@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff93c2ce-9153-4043-9923-50427701a22a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/automatic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/automaticcontroller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/transactioncontroller.py" beforeDir="false" afterPath="$PROJECT_DIR$/controller/transactioncontroller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/account.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/document.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/document.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ledgerentry.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/ledgerentry.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/data/git/JaqueMate" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
