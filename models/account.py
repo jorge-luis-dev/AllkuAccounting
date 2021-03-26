@@ -18,7 +18,9 @@ class Account(db.Model):
     parent = db.relationship("Account", remote_side=[id])
     ledger_entries = db.relationship('LedgerEntry',
                                      backref='accounts')
-    __table_args__ = (UniqueConstraint('code', name='uk_account'),)
+    automatic = db.relationship('Automatic',
+                                     backref='accounts')
+    __table_args__ = (UniqueConstraint('code', name='uk_acc_accounts'),)
 
     def __init__(self, code='',
                  name='',

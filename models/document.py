@@ -15,7 +15,7 @@ class Document(db.Model):
     status = db.Column(db.String, nullable=False)
     transactions = db.relationship('Transaction',
                                      backref='document')
-    __table_args__ = (UniqueConstraint('code', name='uk_document'),)
+    __table_args__ = (UniqueConstraint('code', name='uk_adm_documents'),)
 
     def __init__(self, code='',
                  name='',

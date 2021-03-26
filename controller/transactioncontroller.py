@@ -5,6 +5,7 @@ from app import db
 from models.ledgerentry import LedgerEntry
 from models.transaction import Transaction
 from models.document import Document
+from models.automatic import Automatic
 
 parser = reqparse.RequestParser()
 

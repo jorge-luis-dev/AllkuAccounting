@@ -15,7 +15,7 @@ class Transaction(db.Model):
     date_transaction = db.Column(db.DateTime, nullable=False)
     observation = db.Column(db.String, nullable=False)
     status = db.Column(db.String, nullable=False)
-    __table_args__ = (UniqueConstraint('code', 'numeral', name='uk_transaction'),)
+    __table_args__ = (UniqueConstraint('code', 'numeral', name='uk_acc_transactions'),)
     ledger_entries = db.relationship('LedgerEntry',
                               backref='transaction',
                               lazy='dynamic',

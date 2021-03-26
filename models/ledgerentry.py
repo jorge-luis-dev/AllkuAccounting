@@ -3,7 +3,7 @@ from app import db
 
 
 class LedgerEntry(db.Model):
-    __tablename__ = 'acc_ledgers_entries'
+    __tablename__ = 'acc_ledgers_entry'
 
     id = db.Column(db.Integer, db.Identity(start=1), primary_key=True)
     account_code = db.Column(db.String,
