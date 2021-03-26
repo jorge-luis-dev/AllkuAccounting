@@ -63,22 +63,7 @@ http http://127.0.0.1:5000/rest/v1/accounting/accounts/1
 ```
 ### GET (One account by code)
 ```console
-http http://127.0.0.1:5000/rest/v1/accounting/code/1
+http http://127.0.0.1:5000/rest/v1/accounting/accounts/code/1.1.2.03
 ```
-### GET (All active )
-```console
-http http://127.0.0.1:8080/rest/v1/locations/active
-```
-### POST (Province and City)
-```console
-http POST http://127.0.0.1:5000/accounts < files/new_account.json
-```
-### PUT
-```console
-http PUT http://127.0.0.1:8080/rest/v1/locations/2 < files/update_location.json
-```
-### DELETE
-```console
-http DELETE http://127.0.0.1:8080/rest/v1/locations/41
-```
-
+## API Documentation
+Documentation is in ApiDoc folder, for view imports file in Insomnia o Postman software

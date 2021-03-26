@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "5763d3ed-e024-4ba2-8325-1d7d7a35056d",
+		"name": "Accounting automatics",
+		"description": "Manage automatic parameters",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "All automatics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"rest",
+								"v1",
+								"accounting",
+								"automatics"
+							]
+						},
+						"description": "List all automatics without pagination"
+					},
+					"response": []
+				},
+				{
+					"name": "One automatic by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"rest",
+								"v1",
+								"accounting",
+								"automatics",
+								"6"
+							]
+						},
+						"description": "List one automatic by id"
+					},
+					"response": []
+				},
+				{
+					"name": "One automatic by code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics/code/VENTAS_ICE",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"rest",
+								"v1",
+								"accounting",
+								"automatics",
+								"code",
+								"VENTAS_ICE"
+							]
+						},
+						"description": "List one automatic by code, code is unique key in database"
+					},
+					"response": []
+				}
+			],
+			"description": "Differents methods for GET"
+		},
+		{
+			"name": "Insert automatic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"code\": \"VENTAS_ICE\",\n  \"name\": \"Ventas con productos con ICE\",\n  \"accountCode\": \"1.1.1.01\",\n  \"status\": \"Activo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"rest",
+						"v1",
+						"accounting",
+						"automatics"
+					]
+				},
+				"description": "code: Is unique key in database.\n\nstatus: Values is Activo or Inactivo."
+			},
+			"response": []
+		},
+		{
+			"name": "Update automatic by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "JSON Type",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"code\": \"VENTAS_IVA\",\n    \"name\": \"Ventas de productos con IVA\",\n    \"accountCode\": \"1.1.1.02\",\n    \"status\": \"Inactivo\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics/6",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"rest",
+						"v1",
+						"accounting",
+						"automatics",
+						"6"
+					]
+				},
+				"description": "Update automatics"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete automatic by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/rest/v1/accounting/automatics/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"rest",
+						"v1",
+						"accounting",
+						"automatics",
+						"4"
+					]
+				},
+				"description": "Delete automatic by id"
+			},
+			"response": []
+		}
+	]
+}

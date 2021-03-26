@@ -10,7 +10,7 @@ from models.automatic import Automatic
 parser = reqparse.RequestParser()
 
 
-class TransactionListController(Resource):
+class TransactionSimpleController(Resource):
     # Return all transactions
     def get(self):
         try:
