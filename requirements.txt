@@ -1,6 +1,6 @@
 # Development
-Flask
-Flask-Migrate
+Flask==1.1.4
+Flask-Migrate==2.7.0
 Flask-Script
 Flask-SQLAlchemy
 Flask-RESTful
